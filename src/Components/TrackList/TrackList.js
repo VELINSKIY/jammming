@@ -11,6 +11,7 @@ class TrackList extends React.Component {
                         return <Track 
                             track={track} 
                             key={track.id}
+                            onSearch={this.props.onSearch}
                             onAdd={this.props.onAdd}
                             onRemove={this.props.onRemove}
                             isRemoval={this.props.isRemoval} />
