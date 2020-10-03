@@ -5,6 +5,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 
+// SPOTIFY AUTH DOESN'T GO THROUGH
 
 import Spotify from '../../util/Spotify';
 
