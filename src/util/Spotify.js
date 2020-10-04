@@ -1,5 +1,5 @@
-const clientId = '44bb8eda6e314ad69f7b83fa4b3b413b';
-const redirectUri = 'http://localhost:3000';
+const clientId = 'REMOVED';
+const redirectUri = 'REMOVED';
 let accessToken;
 
 
@@ -14,6 +14,7 @@ const Spotify = {
         const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
         
         if (accessTokenMatch && expiresInMatch) {
+            
             accessToken = accessTokenMatch[1];
             const expiresIn = Number(expiresInMatch[1]);
             
@@ -22,9 +23,7 @@ const Spotify = {
             window.history.pushState('Access Token', null, '/');
             return accessToken;
         } else {
-            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
-            
-            // `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
+            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;            
             window.location = accessUrl;
         }
     },
